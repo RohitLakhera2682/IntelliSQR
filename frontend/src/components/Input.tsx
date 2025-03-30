@@ -5,8 +5,8 @@ interface InputProps<T extends FieldValues> extends React.InputHTMLAttributes<HT
     placeholder?: string;
     type: string;
     className?: string;
-    name: Path<T>; // `name` should be required
-    register: UseFormRegister<T>; // Ensure `register` is a function
+    name: Path<T>; 
+    register: UseFormRegister<T>; 
     error?: string;
   }
   
@@ -17,7 +17,7 @@ interface InputProps<T extends FieldValues> extends React.InputHTMLAttributes<HT
           className={`${className} mb-5 p-2 w-full border-2 rounded-md`}
           type={type}
           placeholder={placeholder}
-          {...register(name)} {...rest} // Spread `register(name)` only if `register` is provided
+          {...register(name)} {...rest} 
         />
         {error && <p className="text-red-500">{error}</p>}
       </div>

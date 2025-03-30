@@ -7,7 +7,7 @@ import Button from "../components/Button";
 import Input from "../components/Input";
 import { Link } from "react-router-dom";
 
-// Validation Schema
+
 const schema = z.object({
   email: z.string().email("Invalid email format"),
   password: z.string().min(6, "Password must be at least 6 characters"),

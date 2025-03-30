@@ -7,7 +7,6 @@ const authSchema = z.object({
   password: z.string().min(6),
 });
 
-// Register User
 export const register = async (req: Request, res: Response) => {
   try {
     const { email, password } = authSchema.parse(req.body);
@@ -24,7 +23,6 @@ export const register = async (req: Request, res: Response) => {
   }
 };
 
-// Login User (Simple Password Check)
 export const login = async (req: Request, res: Response) => {
   try {
     const { email, password } = authSchema.parse(req.body);
